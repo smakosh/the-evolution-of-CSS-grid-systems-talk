@@ -1,0 +1,172 @@
+import { themes } from 'mdx-deck'
+
+export const theme = {
+  ...themes.dark,
+  ...themes.prism
+}
+
+# The evolution of grid systems on the web
+
+### A talk by [Smakosh](https://smakosh.com)
+
+---
+
+## Who's Smakosh? on one hand
+
+A one man software company that craftes software for startups using JavaScript's tools like:
+
+- Gatsby js
+- Next js
+- React Native
+
+etc...
+
+---
+
+## On the other hand
+
+I'm Ismail Ghallou, a self-taught JavaScript developer, speaker, blogger and indie maker
+
+---
+
+## What this talk is about?
+
+- CSS Grid systems
+- The reason we need them
+- Life before CSS
+- Life after CSS and the clearfix hack
+- Hello FlexBox
+- Oh Hi CSS Grid
+
+---
+
+## What this talk isn't about?
+
+- Fundamentals and basics of CSS
+- Doesn't recommend using CSS Grid, feel free to use what you think fits your use case
+- CSS frameworks
+
+---
+
+## What are CSS Grid systems?
+
+---
+import Box from './Box.js'
+
+<Box>
+  A grid system is a structure that allows for content to be stacked both vertically and horizontally in a consistent and easily manageable fashion.
+  <br />Additionally, grid system code is project-agnostic giving it a high degree of portability so that it may be adopted on new projects.
+</Box>
+
+> Source: [Sitepoint](https://www.sitepoint.com/understanding-css-grid-systems/)
+
+---
+
+## Reasons we need them
+
+<Steps>
+
+- They increase productivity
+- Help a lot for responsive layouts
+
+</Steps>
+
+---
+
+## Life before CSS
+
+In before, we were using HTML tables to code the UI
+
+> We still do for email templates
+
+---
+
+## Life after CSS
+
+A month and 11 days after my birthday, CSS was initially released on December 17, 1996
+
+---
+
+## Let's all float but...
+
+Then almost every developer started exploring CSS and migrating from HTML tables using CSS float but there was this issue
+
+---
+import clearFixImage from './images/clearfix.jpg'
+
+<Box>
+  <img src={clearFixImage} alt="clearfix example" />
+</Box>
+
+---
+
+## Clearfix hack
+
+There has been a hack before but unfortunately it wasn't a general one until this came along
+
+```css
+.row:after {
+  content: ""
+  display: table
+  clear: both
+}
+```
+
+---
+
+## Examples of a CSS float grid system
+
+- Bootstrap's 3 Grid
+- Materialize CSS
+- Unnamed CSS
+
+[Example from scratch](https://codepen.io/Smakosh/pen/yRwOwB)
+
+---
+
+## Hello FlexBox
+
+Then few years later, FlexBox got introduced which is way better than using floats
+
+But it is only a 1 dimensional system
+
+[How Bootstrap 4's Grid system is](https://codepen.io/Smakosh/pen/MPZEwg)
+
+---
+
+## React Flex Ready
+
+How I come up with React Flex Ready
+
+`max-width: ${({ col, gap = 1 }) => (col && col < 12 ? `${100 * col / 12 - gap}%` : "100%")};`
+
+[Example](https://codesandbox.io/s/react-flex-ready-example-q6fdg)
+
+--- 
+
+## Oh Hi CSS Grid
+
+Finally CSS Grid came along which is a two dimensional grid-based layout system
+
+which changed the way we implement and even design our grid based user interfaces.
+
+[Complex example](https://codepen.io/Smakosh/pen/BwQBpW)
+
+---
+
+## Some use cases
+
+[Stretched cards](https://codepen.io/Smakosh/pen/dwRVWK)
+
+---
+
+## Thank you!
+
+Feel free to ask me anything
+
+---
+
+## Referrences
+
+- https://css-tricks.com/snippets/css/complete-guide-grid/
+- http://printingcode.runemadsen.com/lecture-grid/
