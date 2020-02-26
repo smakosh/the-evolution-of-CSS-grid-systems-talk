@@ -9,7 +9,12 @@
     "mdx-deck": "^4.1.0"
   },
   "scripts": {
-    "start": "mdx-deck deck.mdx"
+    "start": "mdx-deck deck.mdx",
+    "build": "npm run now-build",
+    "build:presentation": "mdx-deck build deck.mdx --no-html",
+    "build:images": "cp -r images dist/",
+    "now-build": "yarn run build:presentation && yarn run build:images",
+    "deploy": "now"
   },
   "dependencies": {
     "gatsby-source-filesystem": "^2.1.48",
