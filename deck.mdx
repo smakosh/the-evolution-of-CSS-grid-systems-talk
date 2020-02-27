@@ -1,4 +1,13 @@
-import { themes } from 'mdx-deck'
+import { themes, Head } from 'mdx-deck'
+
+<Head>
+  <title>The evolution of grid systems on the web</title>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@smakosh" />
+  <meta name="twitter:title" content="The evolution of grid systems on the web" />
+  <meta name="twitter:description" content="A talk by Smakosh" />
+  <meta name="twitter:image" content="https://2020.css-grids-talk.talks.smakosh.com/images/cover.png" />
+</Head>
 
 export const theme = {
   ...themes.dark,
@@ -13,19 +22,24 @@ export const theme = {
 
 ## Who's Smakosh? on one hand
 
-A one man software company that craftes software for startups using JavaScript's tools like:
+Smakosh LLC is one man software company that craftes software for startups using JavaScript tools like:
 
 - Gatsby js
 - Next js
 - React Native
-
-etc...
+- etc...
 
 ---
 
 ## On the other hand
 
-I'm Ismail Ghallou, a self-taught JavaScript developer, speaker, blogger and indie maker
+I'm Ismail Ghallou
+
+- A self-taught JavaScript developer
+- I work as a Full stack JavaScript developer at Maltem Africa
+- Speaker
+- Blogger
+- Maker of [Ai Hashtags](https://ai-hashtags.com) and other [open source tools](https://github.com/smakosh)
 
 ---
 
@@ -55,7 +69,7 @@ import Box from './Box.js'
 
 <Box>
   A grid system is a structure that allows for content to be stacked both vertically and horizontally in a consistent and easily manageable fashion.
-  <br />Additionally, grid system code is project-agnostic giving it a high degree of portability so that it may be adopted on new projects.
+  <br /><br />Additionally, grid system code is project-agnostic giving it a high degree of portability so that it may be adopted on new projects.
 </Box>
 
 > Source: [Sitepoint](https://www.sitepoint.com/understanding-css-grid-systems/)
@@ -134,6 +148,14 @@ But it is only a 1 dimensional system
 
 ---
 
+import Grid from './images/grid.png'
+
+<Box>
+  <img src={Grid} alt="grid example" />
+</Box>
+
+---
+
 ## React Flex Ready
 
 How I come up with React Flex Ready
@@ -150,11 +172,21 @@ Finally CSS Grid came along which is a two dimensional grid-based layout system
 
 which changed the way we implement and even design our grid based user interfaces.
 
+[Simple example](https://codepen.io/Smakosh/pen/EdMygm)
+
 [Complex example](https://codepen.io/Smakosh/pen/BwQBpW)
 
 ---
 
-## Some use cases
+import CssGrid from './images/css-grid.png'
+
+<Box>
+  <img src={CssGrid} alt="CSS grid example" />
+</Box>
+
+---
+
+## Stretched cards use case
 
 [Stretched cards](https://codepen.io/Smakosh/pen/dwRVWK)
 
